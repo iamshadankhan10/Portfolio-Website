@@ -32,40 +32,73 @@ const Cli = ({ windowName, setWindowsState }) => {
         about: {
           description: 'Short bio about the portfolio owner',
           usage: 'about',
-          fn: () => 'Hi — I\'m a frontend developer building small interactive web apps and portfolio pieces. Type `projects` to see examples.',
-        },
+          fn: () => `---------------------------------------------------------------\n\n`+
+            'Hi, I’m Shadan 👋.\n\n'+
+          ` A Full Stack Developer in progress, passionate about building clean and interactive web applications.
+
+            I work with the MERN stack and love turning ideas into real-world projects. Alongside development, I’m consistently improving my problem-solving skills through DSA.
+
+            Currently exploring how AI can be integrated into modern web applications.`+
+            `\n\n---------------------------------------------------------------\n\n`
+               },
 
         projects: {
-          description: 'List of notable projects',
-          usage: 'projects',
-          fn: () => `Projects:\n\n` +
-            `- mac-os UI (this portfolio) — A React/Vite UI that mimics macOS.\n` +
-            `- GitHub window demo — small integrations and sample components.\n` +
-            `For details, check the GitHub profile with the \`github\` command.`,
+            description: 'List of notable projects',
+            usage: 'projects',
+            fn: () => `Projects:\n\n` +
+
+            `1. Full-Stack Web Application (MERN)\n` +
+            `   → Built a scalable full-stack app using Node.js, Express, MongoDB, and EJS\n` +
+            `   → Designed RESTful APIs with proper CRUD operations\n` +
+            `   → Implemented JWT authentication & role-based authorization\n` +
+            `   → Followed MVC architecture for clean and maintainable code\n` +
+            `   → Tested APIs using Postman\n\n\n` +
+            `---------------------------------------------------------------\n\n` +
+            
+
+            `2. CloudPoint - Weather Application\n` +
+            `   → Developed a real-time weather app using HTML, CSS, JavaScript\n` +
+            `   → Integrated external weather APIs for live data\n` +
+            `   → Displayed weather data with interactive UI & maps\n` +
+            `   → Implemented proper error handling for API responses\n\n\n` +
+           `---------------------------------------------------------------\n\n` +
+
+            `3. macOS Portfolio (This Project)\n` +
+            `   → Built a macOS-inspired UI using React & Vite\n` +
+            `   → Implemented window system (open, close, minimize, maximize)\n` +
+            `   → Created reusable components & smooth UI interactions\n\n` +
+
+            `Use 'github' command to view source code → 🔗\n\n`+
+            `---------------------------------------------------------------\n\n`
         },
 
         resume: {
           description: 'Returns the public resume path',
           usage: 'resume',
-          fn: () => 'Resume available at: /My%20Resume.pdf (open this URL in the browser to download)',
+          fn: () => `---------------------------------------------------------------\n\n` +
+            'Resume available at: https://raw.githubusercontent.com/iamshadankhan10/Portfolio-Website/main/public/resume.pdf (open this URL in the browser to download)',
         },
 
         contact: {
           description: 'Contact information',
           usage: 'contact',
-          fn: () => 'Email: your.email@example.com\nLinkedIn: https://www.linkedin.com/in/your-profile',
+          fn: () => 'Email: iamshadankhan10@gmail.com\nLinkedIn: https://www.linkedin.com/in/shadankhan10/',
         },
 
         github: {
           description: 'Link to GitHub profile',
           usage: 'github',
-          fn: () => 'GitHub: https://github.com/',
+          fn: () => `\n` +
+            'GitHub: https://github.com/iamshadankhan10\n\n' +
+          `---------------------------------------------------------------\n\n`,
         },
 
         skills: {
           description: 'List top skills',
           usage: 'skills',
-          fn: () => 'Skills: JavaScript, React, CSS/SCSS, Vite, UI design',
+          fn: () => 'Skills: JavaScript, React, CSS/SCSS, Vite, ' +
+           'UI design, Node.js, Express, MongoDB, Django, Python, AI integration, Git, RESTful APIs' +
+           `\n---------------------------------------------------------------\n\n`,
         },
       }}
       welcomeMessage={`Welcome to the portfolio terminal!\n\nAvailable commands:

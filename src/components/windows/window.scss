@@ -49,13 +49,13 @@
                 }
 
                 &:hover {
-                    cursor: default;
+                    cursor: pointer;
 
                     .cross {
                         opacity: 1;
                     }
                 }
-        }
+            }
 
             .yellow {
                 background-color: rgb(247, 247, 81);
@@ -68,12 +68,15 @@
                     opacity: 0;
                     transition: opacity 0.15s ease;
                     line-height: 1;
-                    margin-bottom: 2px; /* dash ko vertically center karta hai */
+                    margin-bottom: 2px;
                 }
 
                 &:hover {
-                    cursor: default;
+                    cursor: pointer;
 
+                    .minus {
+                        opacity: 1;
+                    }
                 }
             }
 
@@ -91,7 +94,7 @@
                 }
 
                 &:hover {
-                    cursor: default;
+                    cursor: pointer;
 
                     .expand {
                         opacity: 1;
@@ -99,21 +102,13 @@
                 }
             }
         }
-
-
-
     }
 
     .main-content {
         height: 100%;
     }
 
-    .main-content{
-        height: 100%;
-    }
-
-    *::-webkit-scrollbar{
+    *::-webkit-scrollbar {
         width: 8px;
     }
-
 }

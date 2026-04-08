@@ -20,6 +20,7 @@ const MacWindow = ({ children, width = "40vw", height = "40vh", windowName, setW
     return (
         <Rnd
             ref={rndRef}
+            dragHandleClassName="nav"
             default={{
                 width: width,
                 height: height,
