@@ -40,9 +40,11 @@ const MacWindow = ({ children, width = "40vw", height = "40vh", windowName, setW
                         <div onClick={handleMaximize} className="dot green">
                             <span className="expand">⤢</span>
                         </div>
+
+                        <div className="title"><p></p></div>
                     </div>
 
-                    <div className="title"><p>shadanrazakhan - zsh</p></div>
+                    
 
                 </div>
                 <div className="main-content">

@@ -9,22 +9,46 @@ body,
 #root {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
-main{
-    height: 100%;
-    width: 100%;
+main {
+    height: 100vh;
+    width: 100vw;
 
-    background-image: url(/mac-wallpaper.jpg);
+    background-image: url('/zenitsu.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 
     position: relative;
 
     overflow: hidden;
 }
 
-// body {
-//     background-color: black;
-// }
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+
+    &.hidden {
+        opacity: 0;
+    }
+
+    p {
+        font-family: 'Cinzel Decorative', cursive;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        text-transform: none;
+        color: rgba(255, 255, 255, 0.85);
+        text-shadow: 0 0 20px rgba(255, 200, 50, 0.6),
+                     0 0 40px rgba(255, 200, 50, 0.3);
+    }
+}
