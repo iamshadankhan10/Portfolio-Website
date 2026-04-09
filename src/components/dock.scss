@@ -1,6 +1,7 @@
 .dock {
     display: flex;
-    gap: 1.2rem;
+    gap: 1rem;
+    align-items: flex-end;
 
     position: absolute;
     bottom: 1rem;
@@ -13,8 +14,12 @@
     border-radius: 2.5rem;
 
     backdrop-filter: blur(15px);
-    align-items: flex-end;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, gap 0.3s ease, padding-inline 0.3s ease;
+
+    &:hover {
+        gap: 1.5rem;
+        padding-inline: 1.5rem;
+    }
 
     &.scrolling {
         background-color: rgba(100, 100, 100, 0.6);
@@ -29,9 +34,9 @@
         aspect-ratio: 1/1;
         height: 3rem;
         width: 3rem;
-        transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1);
         position: relative;
         cursor: pointer;
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 
         &::before {
             content: attr(data-name);
@@ -56,12 +61,27 @@
         &:hover::before {
             opacity: 1;
         }
+
+        &:hover {
+            transform: scale(1.6) translateY(-8px);
+            z-index: 2;
+        }
+
+        &:hover + .icon,
+        &:has(+ .icon:hover) {
+            transform: scale(1.25) translateY(-4px);
+        }
+
+        &:hover + .icon + .icon,
+        &:has(+ .icon + .icon:hover) {
+            transform: scale(1.1);
+        }
     }
 
-    .github, .cli { background-color: black; }
-    .note { background: linear-gradient(to bottom, rgb(255, 179, 87), rgb(255, 153, 28)); }
-    .pdf { background: linear-gradient(to bottom, rgb(255, 65, 78), rgb(255, 25, 40)); }
-    .calender, .mail { background: linear-gradient(to bottom, rgb(105, 94, 255), rgb(66, 52, 255)); }
-    .spotify { background: linear-gradient(to bottom, rgb(78, 176, 33), rgb(53, 142, 12)); }
-    .link { background: linear-gradient(to bottom, rgb(163, 97, 170), rgb(142, 33, 154)); }
+    .github, .cli    { background-color: black; }
+    .note            { background: linear-gradient(to bottom, rgb(255, 179, 87), rgb(255, 153, 28)); }
+    .pdf             { background: linear-gradient(to bottom, rgb(255, 65, 78), rgb(255, 25, 40)); }
+    .calendar, .mail { background: linear-gradient(to bottom, rgb(105, 94, 255), rgb(66, 52, 255)); }
+    .spotify         { background: linear-gradient(to bottom, rgb(78, 176, 33), rgb(53, 142, 12)); }
+    .link            { background: linear-gradient(to bottom, rgb(163, 97, 170), rgb(142, 33, 154)); }
 }
