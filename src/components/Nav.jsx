@@ -10,13 +10,8 @@ const Nav = ({ setWindowsState, activeWindow, isScrolling }) => {
                     <img src="./navbar-icons/apple.svg" alt="" />
                 </div>
                 <div className="nav-item">
-                    <p><b>Finder</b></p>
+                    <p><b>{activeWindow ? activeWindow : "Finder"}</b></p>
                 </div>
-                {activeWindow && (
-                    <div className="nav-item active-window">
-                        <p>{activeWindow}</p>
-                    </div>
-                )}
                 <div className="nav-item">
                     <p>File</p>
                 </div>

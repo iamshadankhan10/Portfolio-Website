@@ -42,6 +42,8 @@ function App() {
 
     const activeWindow = Object.keys(windowsState).find(key => windowsState[key]) || null
 
+    const [activeApp, setActiveApp] = useState("Finder");
+
     return (
         <main onWheel={handleScroll}>
             <Nav
